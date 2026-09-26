@@ -1,0 +1,10 @@
+import React from 'react';
+import { ArrowRight, Clock3, RotateCcw, Sparkles } from 'lucide-react';
+
+export default function HistorySection({ history, search = '', onRerun, onFollowUp }) {
+  const filtered = history.filter(item => `${item.question} ${item.result?.insight || ''}`.toLowerCase().includes(search.toLowerCase()));
+  return <section className="history-page">
+    <div className="view-heading"><div><div className="eyebrow"><span className="eyebrow-pulse"/> WORKSPACE MEMORY</div><h1>Questions worth keeping.</h1><p>Every query from this dataset session, ready to revisit.</p></div><span className="context-badge"><Clock3 size={13}/> {history.length} saved {history.length === 1 ? 'query' : 'queries'}</span></div>
+    {!history.length ? <div className="history-empty"><div className="history-empty-icon"><Clock3 size={20}/></div><h2>Your query history will appear here.</h2><p>Ask a question in the analyst to start a searchable record of your exploration.</p><button onClick={onFollowUp}>Go to analyst <ArrowRight size={13}/></button></div> : filtered.length ? <div className="history-table"><div className="history-table-head"><span>QUESTION</span><span>INSIGHT</span><span>WHEN</span><span>ACTIONS</span></div>{filtered.map((item, i) => <div className="history-row" key={`${item.created_at || item.question}-${i}`}><div className="history-question"><span className="history-index">{String(filtered.length - i).padStart(2, '0')}</span><b>{item.question}</b></div><p>{item.result.insight}</p><time>{new Date(item.created_at || Date.now()).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}</time><div className="history-actions"><button onClick={() => onRerun(item)} title="Run this query again"><RotateCcw size={14}/></button><button onClick={onFollowUp} title="Ask a follow-up"><Sparkles size={14}/></button></div></div>)}</div> : <div className="history-empty"><h2>No saved questions match “{search}”.</h2><p>Clear your search or try another phrase.</p></div>}
+  </section>;
+}

@@ -1,0 +1,21 @@
+invoice_id,customer_name,invoice_amount,status,invoice_date,overdue_days,region
+INV-1041,Northstar Studio,18450,Paid,2026-01-08,0,West
+INV-1042,Juniper & Co,12750,Paid,2026-01-12,0,East
+INV-1043,Northstar Studio,22400,Unpaid,2026-01-22,18,West
+INV-1044,Fieldwork Labs,9600,Overdue,2026-02-03,43,Central
+INV-1045,Juniper & Co,15100,Paid,2026-02-10,0,East
+INV-1046,Meridian House,28300,Unpaid,2026-02-18,36,South
+INV-1047,Fieldwork Labs,11750,Paid,2026-03-02,0,Central
+INV-1048,Northstar Studio,19800,Overdue,2026-03-09,67,West
+INV-1049,Meridian House,14200,Paid,2026-03-14,0,South
+INV-1050,Juniper & Co,21600,Unpaid,2026-03-21,12,East
+INV-1051,Fieldwork Labs,17500,Unpaid,2026-04-04,31,Central
+INV-1052,Meridian House,23900,Paid,2026-04-11,0,South
+INV-1053,Northstar Studio,13200,Paid,2026-04-17,0,West
+INV-1054,Juniper & Co,18800,Overdue,2026-04-25,74,East
+INV-1055,Fieldwork Labs,20500,Paid,2026-05-03,0,Central
+INV-1056,Meridian House,16400,Unpaid,2026-05-12,28,South
+INV-1057,Northstar Studio,27100,Paid,2026-05-18,0,West
+INV-1058,Juniper & Co,14900,Paid,2026-05-24,0,East
+INV-1059,Fieldwork Labs,23200,Overdue,2026-06-02,53,Central
+INV-1060,Meridian House,19300,Paid,2026-06-10,0,South
