@@ -17,18 +17,7 @@ app = FastAPI(title="SheetSense AI", version="1.0.0")
 app.add_middleware(
     CORSMiddleware,
     allow_origin_regex=r"https?://(localhost|127\.0\.0\.1|0\.0\.0\.0|10\.\d+\.\d+\.\d+\.\d+|172\.(1[6-9]|2\d|3[01])\.\d+\.\d+|192\.168\.\d+\.\d+):517[3-9]",
-    allow_origins=[
-        "http://localhost:5173",
-        "http://localhost:5174",
-        "http://127.0.0.1:5173",
-        "http://127.0.0.1:5174",
-        "http://0.0.0.0:5173",
-        "http://0.0.0.0:5174",
-        "http://10.116.231.60:5173",
-        "http://10.116.231.60:5174",
-        "http://172.20.8.223:5173",
-        "http://172.20.8.223:5174",
-    ],
+    allow_origins=["*" ],
     allow_methods=["*"],
     allow_headers=["*"],
 )
