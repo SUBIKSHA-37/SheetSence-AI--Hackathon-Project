@@ -6,7 +6,7 @@ import DashboardSection from './components/DashboardSection.jsx';
 import ChatSection from './components/ChatSection.jsx';
 import HistorySection from './components/HistorySection.jsx';
 
-const API = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const API = import.meta.env.VITE_API_URL || 'https://sheetsence-ai-hackathon-project-2.onrender.com';
 
 export default function App() {
   const [session, setSession] = useState(null);
